@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ReWear Design System - Sustainable Fashion Platform */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 210 11% 15%;
+    --foreground: 210 40% 98%;
+    --surface: 210 11% 18%;
+    --surface-variant: 210 11% 22%;
+
+    /* Card System */
+    --card: 210 11% 18%;
+    --card-foreground: 210 40% 98%;
+    --card-hover: 210 11% 22%;
+
+    /* Interactive Elements */
+    --popover: 210 11% 18%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Brand Colors - Sustainable Green Theme */
+    --primary: 142 76% 36%;
+    --primary-foreground: 210 40% 98%;
+    --primary-hover: 142 76% 32%;
+    --primary-glow: 142 76% 36%;
+
+    /* Secondary - Warm Earth Tones */
+    --secondary: 25 35% 35%;
+    --secondary-foreground: 210 40% 98%;
+    --secondary-hover: 25 35% 40%;
+
+    /* Neutral Tones */
+    --muted: 210 11% 25%;
+    --muted-foreground: 215 16% 65%;
+
+    /* Accent - Sustainable Blue */
+    --accent: 200 76% 45%;
+    --accent-foreground: 210 40% 98%;
+
+    /* Status Colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+
+    /* Interface Elements */
+    --border: 210 11% 25%;
+    --input: 210 11% 22%;
+    --ring: 142 76% 36%;
+
+    /* Animations & Effects */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-surface: linear-gradient(135deg, hsl(var(--surface)), hsl(var(--surface-variant)));
+    --shadow-soft: 0 4px 20px hsla(var(--primary), 0.1);
+    --shadow-glow: 0 0 40px hsla(var(--primary-glow), 0.2);
+    
+    --radius: 0.75rem;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
