@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List an Item - ReWear</title>
+    <meta name="description" content="List your clothing item on ReWear's sustainable fashion exchange platform.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="form-styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="logo" aria-label="ReWear Home">
+                    <span class="logo-icon">♻️</span>
+                    <span class="logo-text">ReWear</span>
+                </a>
+            </div>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem" class="nav-link">Home</a></li>
+                <li role="none"><a href="browse-items.html" role="menuitem" class="nav-link">Browse Items</a></li>
+                <li role="none"><a href="list-item.html" role="menuitem" class="nav-link active">Add Item</a></li>
+                <li role="none"><a href="login.html" role="menuitem" class="nav-link">Login</a></li>
+                <li role="none"><a href="register.html" role="menuitem" class="nav-link nav-cta">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content">
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="header-content">
+                    <h1 class="page-title">List an Item</h1>
+                    <p class="page-subtitle">Share your pre-loved clothing with the ReWear community</p>
+                    <div class="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span class="breadcrumb-separator">›</span>
+                        <span class="breadcrumb-current">List an Item</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="form-section">
+            <div class="container">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2>Item Details</h2>
+                        <p>Fill in the information below to list your item. Fields marked with <span class="required-indicator">*</span> are required.</p>
+                    </div>
+
+                    <form class="item-form" id="itemForm" novalidate>
+                        <!-- Image Upload Section -->
+                        <div class="form-section-group">
+                            <h3 class="section-title">Photos</h3>
+                            <div class="form-group">
+                                <label for="images" class="form-label">
+                                    Upload Images <span class="required-indicator">*</span>
+                                    <span class="label-hint">Add up to 5 photos (JPG, PNG, max 5MB each)</span>
+                                </label>
+                                <div class="file-upload-area" id="fileUploadArea">
+                                    <input type="file" id="images" name="images" multiple accept="image/*" class="file-input" required aria-describedby="images-error images-hint">
+                                    <div class="file-upload-content">
+                                        <div class="upload-icon">📷</div>
+                                        <p class="upload-text">
+                                            <span class="upload-primary">Click to upload photos</span>
+                                            <span class="upload-secondary">or drag and drop</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="image-preview-container" id="imagePreviewContainer"></div>
+                                <div class="form-hint" id="images-hint">First image will be used as the main photo</div>
+                                <div class="error-message" id="images-error" role="alert"></div>
+                            </div>
+                        </div>
+
+                        <!-- Basic Information -->
+                        <div class="form-section-group">
+                            <h3 class="section-title">Basic Information</h3>
+                            
+                            <div class="form-group">
+                                <label for="title" class="form-label">
+                                    Item Title <span class="required-indicator">*</span>
+                                </label>
+                                <input type="text" id="title" name="title" class="form-input" required 
+                                       placeholder="e.g., Vintage Denim Jacket" 
+                                       maxlength="100"
+                                       aria-describedby="title-error title-hint">
+                                <div class="form-hint" id="title-hint">Be descriptive but concise (max 100 characters)</div>
+                                <div class="error-message" id="title-error" role="alert"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="description" class="form-label">
+                                    Description <span class="required-indicator">*</span>
+                                </label>
+                                <textarea id="description" name="description" class="form-textarea" required 
+                                          placeholder="Describe the item's style, fit, material, and any notable features..."
+                                          rows="4"
+                                          maxlength="500"
+                                          aria-describedby="description-error description-hint"></textarea>
+                                <div class="form-hint" id="description-hint">
+                                    <span class="char-counter">0/500 characters</span>
+                                </div>
+                                <div class="error-message" id="description-error" role="alert"></div>
+                            </div>
+                        </div>
+
+                        <!-- Category and Details -->
+                        <div class="form-section-group">
+                            <h3 class="section-title">Category & Details</h3>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="category" class="form-label">
+                                        Category <span class="required-indicator">*</span>
+                                    </label>
+                                    <select id="category" name="category" class="form-select" required aria-describedby="category-error">
+                                        <option value="">Select a category</option>
+                                        <option value="men">Men</option>
+                                        <option value="women">Women</option>
+                                        <option value="kids">Kids</option>
+                                        <option value="accessories">Accessories</option>
+                                    </select>
+                                    <div class="error-message" id="category-error" role="alert"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="type" class="form-label">
+                                        Type <span class="required-indicator">*</span>
+                                    </label>
+                                    <select id="type" name="type" class="form-select" required aria-describedby="type-error">
+                                        <option value="">Select item type</option>
+                                        <!-- Options will be populated based on category selection -->
+                                    </select>
+                                    <div class="error-message" id="type-error" role="alert"></div>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="size" class="form-label">
+                                        Size <span class="required-indicator">*</span>
+                                    </label>
+                                    <select id="size" name="size" class="form-select" required aria-describedby="size-error">
+                                        <option value="">Select size</option>
+                                        <option value="xs">XS</option>
+                                        <option value="s">S</option>
+                                        <option value="m">M</option>
+                                        <option value="l">L</option>
+                                        <option value="xl">XL</option>
+                                        <option value="xxl">XXL</option>
+                                        <option value="one-size">One Size</option>
+                                    </select>
+                                    <div class="error-message" id="size-error" role="alert"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="condition" class="form-label">
+                                        Condition <span class="required-indicator">*</span>
+                                    </label>
+                                    <select id="condition" name="condition" class="form-select" required aria-describedby="condition-error">
+                                        <option value="">Select condition</option>
+                                        <option value="new">New (with tags)</option>
+                                        <option value="like-new">Like New (worn once or twice)</option>
+                                        <option value="good">Good (gently used)</option>
+                                        <option value="fair">Fair (shows wear)</option>
+                                    </select>
+                                    <div class="error-message" id="condition-error" role="alert"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Information -->
+                        <div class="form-section-group">
+                            <h3 class="section-title">Additional Information</h3>
+                            
+                            <div class="form-group">
+                                <label for="tags" class="form-label">
+                                    Tags
+                                    <span class="label-hint">Help others find your item</span>
+                                </label>
+                                <input type="text" id="tags" name="tags" class="form-input" 
+                                       placeholder="e.g., vintage, casual, summer, designer"
+                                       aria-describedby="tags-hint">
+                                <div class="form-hint" id="tags-hint">Separate tags with commas. Use keywords that describe style, occasion, or brand.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="terms" name="terms" class="form-checkbox" required aria-describedby="terms-error">
+                                    <label for="terms" class="checkbox-label">
+                                        I agree to the <a href="terms.html" class="link">Terms of Service</a> and <a href="community-rules.html" class="link">Community Guidelines</a> <span class="required-indicator">*</span>
+                                    </label>
+                                </div>
+                                <div class="error-message" id="terms-error" role="alert"></div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="notifications" name="notifications" class="form-checkbox">
+                                    <label for="notifications" class="checkbox-label">
+                                        Send me notifications about interest in this item
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Form Actions -->
+                        <div class="form-actions">
+                            <button type="button" class="btn-secondary" onclick="history.back()">Cancel</button>
+                            <button type="submit" class="btn-primary" id="submitBtn">
+                                <span class="btn-text">List Item</span>
+                                <span class="btn-loading" style="display: none;">
+                                    <span class="spinner"></span>
+                                    Uploading...
+                                </span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Help Sidebar -->
+                <aside class="help-sidebar">
+                    <div class="help-card">
+                        <h3>📸 Photo Tips</h3>
+                        <ul>
+                            <li>Use natural lighting</li>
+                            <li>Show the item from multiple angles</li>
+                            <li>Include close-ups of any details or flaws</li>
+                            <li>Use a clean, uncluttered background</li>
+                        </ul>
+                    </div>
+
+                    <div class="help-card">
+                        <h3>✍️ Writing Tips</h3>
+                        <ul>
+                            <li>Be honest about condition</li>
+                            <li>Include brand name if applicable</li>
+                            <li>Mention material and care instructions</li>
+                            <li>Describe fit (runs small/large)</li>
+                        </ul>
+                    </div>
+
+                    <div class="help-card">
+                        <h3>🤝 Community Guidelines</h3>
+                        <ul>
+                            <li>Only list items you own</li>
+                            <li>Ensure items are clean</li>
+                            <li>Be responsive to messages</li>
+                            <li>Meet in safe, public places</li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">♻️</span>
+                        <span class="logo-text">ReWear</span>
+                    </div>
+                    <p class="footer-desc">Building a sustainable fashion community, one swap at a time.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Community</h4>
+                        <ul>
+                            <li><a href="how-it-works.html">How it Works</a></li>
+                            <li><a href="safety.html">Safety Guidelines</a></li>
+                            <li><a href="community-rules.html">Community Rules</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="help.html">Help Center</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="report.html">Report an Issue</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>About</h4>
+                        <ul>
+                            <li><a href="about.html">Our Mission</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ReWear. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="navigation.js"></script>
+    <script src="script.js"></script>
+    <script src="form-script.js"></script>
+</body>
+</html>

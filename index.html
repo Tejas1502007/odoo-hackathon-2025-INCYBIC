@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReWear - Community Clothing Exchange</title>
+    <meta name="description" content="Join ReWear's sustainable fashion community. Swap, share, and discover pre-loved clothing while reducing fashion waste.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#" class="logo" aria-label="ReWear Home">
+                    <span class="logo-icon">♻️</span>
+                    <span class="logo-text">ReWear</span>
+                </a>
+            </div>
+            
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="index.html" role="menuitem" class="nav-link active">Home</a></li>
+                <li role="none"><a href="browse-items.html" role="menuitem" class="nav-link">Browse Items</a></li>
+                <li role="none"><a href="list-item.html" role="menuitem" class="nav-link">Add Item</a></li>
+                <li role="none"><a href="login.html" role="menuitem" class="nav-link">Login</a></li>
+                <li role="none"><a href="register.html" role="menuitem" class="nav-link nav-cta">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Carousel -->
+    <section class="hero" aria-label="Featured content">
+        <div class="carousel-container">
+            <div class="carousel" role="region" aria-label="Image carousel">
+                <div class="carousel-slide active">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Sustainable fashion community" loading="eager">
+                    <div class="carousel-content">
+                        <h1>Sustainable Fashion Starts Here</h1>
+                        <p>Join thousands of fashion lovers reducing waste through clothing swaps</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" alt="Clothing exchange community" loading="lazy">
+                    <div class="carousel-content">
+                        <h1>Discover Your Next Favorite Piece</h1>
+                        <p>Browse unique, pre-loved items from your community</p>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" alt="Eco-friendly wardrobe" loading="lazy">
+                    <div class="carousel-content">
+                        <h1>Give Your Clothes a Second Life</h1>
+                        <p>List items you no longer wear and help build a circular fashion economy</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="carousel-btn carousel-prev" aria-label="Previous slide">‹</button>
+            <button class="carousel-btn carousel-next" aria-label="Next slide">›</button>
+            
+            <div class="carousel-indicators" role="tablist" aria-label="Carousel navigation">
+                <button class="indicator active" aria-label="Go to slide 1" role="tab"></button>
+                <button class="indicator" aria-label="Go to slide 2" role="tab"></button>
+                <button class="indicator" aria-label="Go to slide 3" role="tab"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" aria-label="Main actions">
+        <div class="container">
+            <div class="cta-grid">
+                <a href="register.html" class="cta-button primary" role="button">
+                    <span class="cta-icon">🔄</span>
+                    <span class="cta-text">Start Swapping</span>
+                    <span class="cta-desc">Join the community</span>
+                </a>
+                <a href="browse-items.html" class="cta-button secondary" role="button">
+                    <span class="cta-icon">👗</span>
+                    <span class="cta-text">Browse Items</span>
+                    <span class="cta-desc">Find your style</span>
+                </a>
+                <a href="list-item.html" class="cta-button tertiary" role="button">
+                    <span class="cta-icon">📸</span>
+                    <span class="cta-text">List an Item</span>
+                    <span class="cta-desc">Share your clothes</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section" aria-label="Clothing categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid">
+                <a href="browse-items.html?category=men" class="category-card" role="button">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Men's clothing" loading="lazy">
+                    </div>
+                    <h3 class="category-title">Men</h3>
+                    <p class="category-count">2,450+ items</p>
+                </a>
+                
+                <a href="browse-items.html?category=women" class="category-card" role="button">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616c9c0e8e0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Women's clothing" loading="lazy">
+                    </div>
+                    <h3 class="category-title">Women</h3>
+                    <p class="category-count">3,890+ items</p>
+                </a>
+                
+                <a href="browse-items.html?category=kids" class="category-card" role="button">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Kids clothing" loading="lazy">
+                    </div>
+                    <h3 class="category-title">Kids</h3>
+                    <p class="category-count">1,230+ items</p>
+                </a>
+                
+                <a href="browse-items.html?category=accessories" class="category-card" role="button">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Accessories" loading="lazy">
+                    </div>
+                    <h3 class="category-title">Accessories</h3>
+                    <p class="category-count">890+ items</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Items Section -->
+    <section class="featured-section" aria-label="Featured items">
+        <div class="container">
+            <h2 class="section-title">Featured Items</h2>
+            <div class="items-grid">
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Vintage denim jacket" loading="lazy">
+                        <span class="item-badge">New</span>
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-title">Vintage Denim Jacket</h3>
+                        <p class="item-size">Size: M</p>
+                        <p class="item-location">📍 Downtown</p>
+                    </div>
+                </article>
+
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Floral summer dress" loading="lazy">
+                        <span class="item-badge popular">Popular</span>
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-title">Floral Summer Dress</h3>
+                        <p class="item-size">Size: S</p>
+                        <p class="item-location">📍 Midtown</p>
+                    </div>
+                </article>
+
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Casual sneakers" loading="lazy">
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-title">Casual Sneakers</h3>
+                        <p class="item-size">Size: 9</p>
+                        <p class="item-location">📍 Uptown</p>
+                    </div>
+                </article>
+
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Wool winter coat" loading="lazy">
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-title">Wool Winter Coat</h3>
+                        <p class="item-size">Size: L</p>
+                        <p class="item-location">📍 Westside</p>
+                    </div>
+                </article>
+
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1583743089695-4b816a340f82?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Designer handbag" loading="lazy">
+                        <span class="item-badge">Featured</span>
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-title">Designer Handbag</h3>
+                        <p class="item-size">One Size</p>
+                        <p class="item-location">📍 Central</p>
+                    </div>
+                </article>
+
+                <article class="item-card">
+                    <div class="item-image">
+                        <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Formal blazer" loading="lazy">
+                    </div>
+                    <div class="item-info">
+                        <h3 class="item-title">Formal Blazer</h3>
+                        <p class="item-size">Size: M</p>
+                        <p class="item-location">📍 Business District</p>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="section-footer">
+                <a href="browse-items.html" class="btn-secondary">View All Items</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">♻️</span>
+                        <span class="logo-text">ReWear</span>
+                    </div>
+                    <p class="footer-desc">Building a sustainable fashion community, one swap at a time.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Community</h4>
+                        <ul>
+                            <li><a href="how-it-works.html">How it Works</a></li>
+                            <li><a href="safety.html">Safety Guidelines</a></li>
+                            <li><a href="community-rules.html">Community Rules</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="help.html">Help Center</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="report.html">Report an Issue</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>About</h4>
+                        <ul>
+                            <li><a href="about.html">Our Mission</a></li>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ReWear. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="navigation.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
